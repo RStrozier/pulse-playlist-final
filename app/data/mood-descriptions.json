@@ -1,0 +1,30 @@
+{
+    "moodDescriptions": {
+      "Happy": "Feeling or showing pleasure or contentment.",
+      "Sad": "Feeling or showing sorrow; unhappy.",
+      "Energetic": "Showing or involving great activity or vitality.",
+      "Relaxed": "Free from tension and anxiety; at ease.",
+      "Angry": "Feeling or showing strong displeasure or hostility.",
+      "Anxious": "Experiencing worry, unease, or nervousness.",
+      "Bored": "Feeling weary and lacks interest in the current activity.",
+      "Confident": "Feeling or showing certainty about something.",
+      "Disappointed": "Someone or something has failed to fulfill expectations.",
+      "Excited": "Very enthusiastic and eager.",
+      "Frustrated": "Annoyance because of the inability to achieve something.",
+      "Grateful": "Feeling or showing an appreciation; thankful.",
+      "Hopeful": "Feeling or inspiring optimism about a future event.",
+      "Inspired": "Feeling motivated to do something creative or beneficial.",
+      "Lonely": "Sad because there's lack of friends or company.",
+      "Nostalgic": "Feeling a sentimental longing for the past.",
+      "Overwhelmed": "Feeling drowned by too much emotion or too many tasks.",
+      "Proud": "Feeling satisfied at one's own achievements.",
+      "Relieved": "Feeling reassured and relaxed after a period of anxiety.",
+      "Surprised": "Feeling or showing surprise.",
+      "Tired": "In need of rest or sleep; weary.",
+      "Worried": "Anxious or troubled about actual or potential problems.",
+      "Curious": "Eager to know or learn something.",
+      "Content": "In a state of peaceful happiness.",
+      "Playful": "Fond of games and amusement; lighthearted.",
+      "Determined": "Made a firm decision that led to resolve, won't change it."
+    }
+  }

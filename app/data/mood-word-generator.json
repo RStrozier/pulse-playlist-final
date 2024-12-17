@@ -1,0 +1,30 @@
+{
+    "moods": {
+      "Happy": ["Joyful", "Cheerful", "Bright", "Uplifting", "Sunny", "Elated", "Playful"],
+      "Sad": ["Melancholic", "Gloomy", "Sorrowful", "Heartfelt", "Reflective", "Somber"],
+      "Energetic": ["Vibrant", "Dynamic", "Lively", "Exciting", "Spirited", "Zesty"],
+      "Relaxed": ["Calm", "Tranquil", "Peaceful", "Easygoing", "Laid-back", "Soothing"],
+      "Angry": ["Furious", "Irate", "Livid", "Fuming", "Agitated", "Resentful"],
+      "Anxious": ["Nervous", "Restless", "Uneasy", "Apprehensive", "Worried", "Tense"],
+      "Bored": ["Indifferent", "Disinterested", "Uninspired", "Listless", "Weary", "Dull"],
+      "Confident": ["Self-assured", "Bold", "Empowered", "Fearless", "Assured", "Invincible"],
+      "Disappointed": ["Disheartened", "Let down", "Dismayed", "Deflated", "Disillusioned"],
+      "Excited": ["Thrilled", "Eager", "Anticipatory", "Aroused", "Stimulated", "Buzzing"],
+      "Frustrated": ["Irritated", "Annoyed", "Exasperated", "Vexed", "Aggravated"],
+      "Grateful": ["Thankful", "Appreciative", "Obliged", "Blessed", "Content"],
+      "Hopeful": ["Optimistic", "Expectant", "Aspiring", "Encouraged", "Promising"],
+      "Inspired": ["Motivated", "Stimulated", "Enlightened", "Creative", "Visionary"],
+      "Lonely": ["Isolated", "Desolate", "Alone", "Forlorn", "Empty"],
+      "Nostalgic": ["Sentimental", "Wistful", "Reflective", "Reminiscent", "Longing"],
+      "Overwhelmed": ["Burdened", "Stressed", "Overcome", "Flooded", "Engulfed"],
+      "Proud": ["Accomplished", "Dignified", "Proud-hearted", "Honorable", "Noble"],
+      "Relieved": ["Relaxed", "Comforted", "Reassured", "Unburdened", "Soothed"],
+      "Surprised": ["Astonished", "Astounded", "Dumbfounded", "Stunned", "Startled"],
+      "Tired": ["Fatigued", "Exhausted", "Weary", "Drained", "Sleepy"],
+      "Worried": ["Concerned", "Apprehensive", "Fearful", "Nervous", "Distressed"],
+      "Curious": ["Inquisitive", "Intrigued", "Eager", "Questioning", "Probing"],
+      "Content": ["Satisfied", "Pleased", "Fulfilled", "Happy", "At ease"],
+      "Playful": ["Fun-loving", "Jovial", "Jolly", "Merry", "Lighthearted"],
+      "Determined": ["Resolute", "Tenacious", "Persistent", "Steadfast", "Unyielding"]
+    }
+  }

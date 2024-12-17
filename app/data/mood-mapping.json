@@ -1,0 +1,30 @@
+{
+    "moodMappings": {
+        "Happy": ["pop", "dance", "indie pop", "electropop"],
+        "Sad": ["sad", "blues", "folk", "acoustic"],
+        "Energetic": ["rock", "dance", "electronic", "house", "punk"],
+        "Relaxed": ["chill", "ambient", "smooth jazz", "lo-fi", "soft rock"],
+        "Angry": ["metal", "hard rock", "punk", "grunge"],
+        "Anxious": ["ambient", "chillhop", "lo-fi"],
+        "Bored": ["indie", "lo-fi", "alternative", "post-rock"],
+        "Confident": ["hip-hop", "rock", "dance", "trap"],
+        "Disappointed": ["acoustic", "folk", "singer-songwriter"],
+        "Excited": ["dance", "electronic", "upbeat pop", "trance"],
+        "Frustrated": ["punk", "metal", "hard rock", "grunge"],
+        "Grateful": ["folk", "acoustic", "easy listening"],
+        "Hopeful": ["inspirational", "uplifting pop", "indie pop"],
+        "Inspired": ["classical", "instrumental", "jazz"],
+        "Lonely": ["blues", "acoustic", "soft rock", "singer-songwriter"],
+        "Nostalgic": ["retro", "indie", "classic rock", "soul"],
+        "Overwhelmed": ["soft rock", "chill", "ambient"],
+        "Proud": ["anthem", "rock", "hip-hop", "pop"],
+        "Relieved": ["smooth jazz", "chill", "ambient"],
+        "Surprised": ["experimental", "indie", "electronic"],
+        "Tired": ["lo-fi", "chill", "acoustic", "soft rock"],
+        "Worried": ["chillhop", "ambient", "soft rock"],
+        "Curious": ["acoustic"],
+        "Content": ["easy listening", "chill", "folk", "acoustic"],
+        "Playful": ["dance"],
+        "Determined": ["rock", "hip-hop", "electronic", "dance"]
+    }
+}
