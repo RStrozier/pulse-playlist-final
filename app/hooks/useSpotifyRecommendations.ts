@@ -56,7 +56,7 @@ const useSpotifyRecommendations = () => {
         ];
 
         setTracks(hardcodedTracks);
-      } catch (err) {
+      } catch {
         setError('Failed to load recommendations');
       } finally {
         setLoading(false);
