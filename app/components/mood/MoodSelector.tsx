@@ -49,11 +49,11 @@ const MoodSelector = () => {
             <div className="flex justify-center items-center py-2 px-2">
                 <Button
                     onClick={toggleExpand}
-                    className="flex items-center justify-center text-white font-bold py-2 px-4 rounded-full bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-lg transform hover:scale-105"
+                    className="flex items-center justify-center text-white font-bold py-2 px-4 rounded-full bg-blue-600 transition-all duration-300 shadow-lg transform hover:scale-105 hover:text-blue-800"
                 >
                     {isExpanded ? <MdExpandLess /> : <MdExpandMore />}
                     <span className="ml-2 text-base">
-                        {isExpanded ? 'Close Moods' : 'Select Mood'}
+                        {isExpanded ? 'Close Moods' : 'Click To Select Mood'}
                     </span>
                 </Button>
             </div>
@@ -62,7 +62,7 @@ const MoodSelector = () => {
             {/* Full-page overlay for moods */}
             {isExpanded && (
                 <div className="fixed inset-0 bg-gradient-to-b from-red-500 to-blue-500 z-50 flex flex-col items-center justify-center overflow-auto">
-                    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-4">
+                    <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
                         {moods.map((mood) => (
                             <Tooltip
                                 key={mood}
@@ -81,12 +81,22 @@ const MoodSelector = () => {
                         ))}
                     </div>
                     <Button
-                        variant="contained"
-                        className="mt-4 p-4 mx-2"
-                        onClick={() => toggleExpand()} // Close overlay when clicked
-                    >
-                        Confirm Mood
-                    </Button>
+  variant="contained"
+  sx={{
+    p: 2,
+    mx: 2,
+    backgroundColor: '#EF4444', 
+    color: 'white', 
+    '&:hover': {
+      backgroundColor: 'darkred', 
+    },
+    fontWeight: 'semibold', 
+    borderRadius: 2, 
+  }}
+  onClick={() => toggleExpand()}
+>
+  Confirm Mood
+</Button>
                 </div>
             )}
 

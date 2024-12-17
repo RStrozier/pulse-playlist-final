@@ -32,7 +32,8 @@ const SpotifyUserData = () => {
           Email: {userData.email}
         </p>
 
-        <button onClick={logout}>Logout</button>
+        <button onClick={logout}
+        className="text-red-400 text-xs underline hover:text-red-700">Log out</button>
       </div>
     </div>
   );

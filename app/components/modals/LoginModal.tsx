@@ -12,7 +12,7 @@ export default function LoginModal({
   onClose: () => void;
 }) {
   const handleLogin = () => {
-    onClose(); // Close the modal
+    onClose(); 
     window.location.href = "/api/login"; // Redirect to Spotify login
   };
 

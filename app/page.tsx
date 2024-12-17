@@ -9,22 +9,26 @@ import { MoodProvider } from "./context/MoodContext";
 import { ToggleProvider } from "./context/ToggleContext";
 import MoodSelector from "./components/mood/MoodSelector";
 import PulsePlaylist from "./components/playlist/PulsePlaylist";
+import Navbar from "./components/navbar/Navbar";
 
 const HomeContent = () => {
   const { accessToken } = useUserData();
 
   if (!accessToken) {
     return (
-      <LoginModal isOpen={true} onClose={() => console.log("Modal closed")} />
+      <div className="h-screen w-screen bg-gradient-to-b from-red-500 to-blue-500">
+        <LoginModal isOpen={true} onClose={() => console.log("Logged in")} />
+      </div>
     );
   }
 
   return (
-    <div>
+    <>
+      <Navbar />
       <SpotifyUserData />
       <MoodSelector />
       <PulsePlaylist />
-    </div>
+    </>
   );
 };
 
