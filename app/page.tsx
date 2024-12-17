@@ -7,7 +7,7 @@ import LoadingIndicator from "./components/LoadingIndicator";
 import SpotifyUserData from "./components/user/SpotifyUserDisplay";
 
 const HomeContent = () => {
-  const { accessToken, logout } = useUserData();
+  const { accessToken } = useUserData();
 
   if (!accessToken) {
     return (
@@ -17,7 +17,6 @@ const HomeContent = () => {
 
   return (
     <div>
-      <button onClick={logout}>Logout</button>
       <SpotifyUserData />
     </div>
   );
