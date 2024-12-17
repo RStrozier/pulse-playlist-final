@@ -110,3 +110,8 @@ export interface Track {
     album: Album;
     preview_url?: string; // Optional if a track might not have a preview
 }
+
+export interface PulsePlaylistModalProps {
+    open: boolean;
+    onClose: () => void;
+  }
