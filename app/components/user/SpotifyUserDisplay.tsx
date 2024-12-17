@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { useUserData } from "@/app/context/UserDataContext"; 
 const SpotifyUserData = () => {
-  const { userData, logout } = useUserData(); // Access user data from context
+  const { userData, logout } = useUserData(); 
 
   if (!userData) {
     return <p>Loading user data...</p>;

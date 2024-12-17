@@ -5,6 +5,10 @@ import { UserDataProvider, useUserData } from "./context/UserDataContext";
 import LoginModal from "./components/modals/LoginModal";
 import LoadingIndicator from "./components/LoadingIndicator";
 import SpotifyUserData from "./components/user/SpotifyUserDisplay";
+import { MoodProvider } from "./context/MoodContext";
+import { ToggleProvider } from "./context/ToggleContext";
+import MoodSelector from "./components/mood/MoodSelector";
+import PulsePlaylist from "./components/playlist/PulsePlaylist";
 
 const HomeContent = () => {
   const { accessToken } = useUserData();
@@ -18,6 +22,8 @@ const HomeContent = () => {
   return (
     <div>
       <SpotifyUserData />
+      <MoodSelector />
+      <PulsePlaylist />
     </div>
   );
 };
@@ -25,9 +31,13 @@ const HomeContent = () => {
 const Home = () => {
   return (
     <UserDataProvider>
-      <React.Suspense fallback={<LoadingIndicator />}>
-        <HomeContent />
-      </React.Suspense>
+      <MoodProvider>
+        <ToggleProvider>
+          <React.Suspense fallback={<LoadingIndicator />}>
+            <HomeContent />
+          </React.Suspense>
+        </ToggleProvider>
+      </MoodProvider>
     </UserDataProvider>
   );
 };
