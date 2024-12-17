@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-// import PulsePlaylistModal from "../modals/PulsePlaylistModal";
+import PulsePlaylistModal from "../modals/PulsePlaylistModal";
 import PulsePlaylistMessage from "./PulsePlaylistMessage";
 import { useSpotifyRecommendations } from "@/app/hooks/useSpotifyReccommendations";
 
@@ -29,7 +29,7 @@ const PulsePlaylist = () => {
                     >
                         View Playlist
                     </button>
-                    {/* <PulsePlaylistModal open={modalOpen} onClose={handleCloseModal} /> */}
+                    <PulsePlaylistModal open={modalOpen} onClose={handleCloseModal} />
                 </>
             ) : (
                 <>

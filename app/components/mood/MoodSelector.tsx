@@ -5,12 +5,12 @@ import moodData from '../../data/moods.json';
 import moodDescriptions from '../../data/mood-descriptions.json';
 import { Button, Tooltip } from '@mui/material';
 import { MdExpandMore, MdExpandLess } from 'react-icons/md';
-// import PulsePlaylistModal from '../modals/PulsePlaylistModal';
 import { MoodKey } from '@/app/data/interfaces';
 import { useMood } from '@/app/context/MoodContext';
 import MoodDescription from './MoodDescription';
 import { useToggle } from '@/app/context/ToggleContext';
 import MoodAlert from '../alerts/MoodAlert';
+import PulsePlaylistModal from '../modals/PulsePlaylistModal';
 
 const moods = moodData.moods as MoodKey[];
 const descriptions = moodDescriptions.moodDescriptions;
@@ -102,9 +102,7 @@ const MoodSelector = () => {
             <MoodAlert />
             <br />
             <div className="spacer"></div>
-
-            {/* Add the modal component here */}
-            {/* <PulsePlaylistModal open={modalOpen} onClose={handleCloseModal} /> */}
+            <PulsePlaylistModal open={modalOpen} onClose={handleCloseModal} />
         </div>
     );
 };
