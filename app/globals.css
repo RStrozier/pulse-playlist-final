@@ -5,6 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  max-width: 1280px; /* Or any width you prefer */
+  margin: 0 auto;    
+  box-sizing: border-box; /* Ensure padding doesn't break layout */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +21,122 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.spacer {
+  margin-top: 1.25rem;
+}
+
+.mini-spacer {
+  margin-top: .75rem;
+}
+
+/* globals.css */
+body {
+  font-family: 'Roboto', sans-serif; /* Default font for the entire app */
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+/* keyframes */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.pulse-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.pulse-modal:hover {
+  animation: pulsemodal 1.5s infinite; /* Pulse animation */
+}
+
+@keyframes pulsemodal {
+  0% {
+    transform: translate(-50%, -50%) scale(1); /* Normal size */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3); /* Subtle glow */
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly larger */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(255, 0, 255, 0.6); /* Enhanced glow */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* Back to normal size */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3); /* Glow resets */
+  }
+}
+
+/* pulse buttons  */
+
+/* Default button state */
+.pulse-button {
+  position: relative;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transitions for normal hover */
+}
+
+/* Apply the pulse animation only on hover */
+.pulse-button:hover {
+  animation: pulse 1.5s infinite; /* Pulse animation starts on hover */
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 87, 87, 0.3); /* Subtle glow */
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 87, 87, 0.6); /* Stronger glow */
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 87, 87, 0.3); /* Reset glow */
+  }
+}
+
+
+.background {
+  background: radial-gradient(
+    circle, 
+    #1a1a1a 0%, /* Dark gray in the center */
+    #1a1a1a 40%, /* Keep the center grounded */
+    #ff0000 70%, /* Transition to red */
+    #0000ff 100% End with blue
+  );
+  background-size: 400% 400%; /* Ensure the gradient moves */
+  animation: gradientMove 15s ease infinite; /* Animate the gradient */
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

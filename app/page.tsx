@@ -1,12 +1,19 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 import LoginModal from "./components/modals/LoginModal";
+import LoadingIndicator from "./components/LoadingIndicator";
+
+interface SpotifyUserData {
+  display_name: string;
+  images: { url: string }[];
+}
 
 const Home = () => {
   const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [userData, setUserData] = useState<any>(null);
-  const [isModalOpen, setModalOpen] = useState<boolean>(false);
+  const [userData, setUserData] = useState<SpotifyUserData | null>(null);
+  const [loading, setLoading] = useState<boolean>(true); // New loading state
 
   // Function to validate the access token
   const validateToken = async (token: string) => {
@@ -30,7 +37,6 @@ const Home = () => {
   };
 
   useEffect(() => {
-    // Retrieve access token from cookies
     const cookies = document.cookie
       .split("; ")
       .find((cookie) => cookie.startsWith("access_token="));
@@ -41,23 +47,17 @@ const Home = () => {
         if (isValid) {
           setAccessToken(token);
         } else {
-          setAccessToken(null); // Clear token if invalid
+          setAccessToken(null);
         }
+        setLoading(false); // Stop loading regardless of token validity
       });
     } else {
-      setAccessToken(null); // No token found
-      setModalOpen(true); // Show the login modal
+      setAccessToken(null);
+      setLoading(false); // Stop loading if no token is found
     }
   }, []);
 
-  // Automatically fetch Spotify data when accessToken is set
-  useEffect(() => {
-    if (accessToken) {
-      fetchSpotifyData();
-    }
-  }, [accessToken]); // Runs whenever accessToken changes
-
-  const fetchSpotifyData = async () => {
+  const fetchSpotifyData = useCallback(async () => {
     if (!accessToken) {
       console.error("No access token available for fetching data.");
       return;
@@ -79,36 +79,55 @@ const Home = () => {
     } catch (error) {
       console.error("Failed to fetch Spotify data:", error);
     }
-  };
+  }, [accessToken]);
+
+  useEffect(() => {
+    if (accessToken) {
+      fetchSpotifyData();
+    }
+  }, [accessToken, fetchSpotifyData]);
 
   const logout = () => {
-    // Clear the access_token cookie and reset state
     document.cookie =
       "access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     setAccessToken(null);
     setUserData(null);
-    setModalOpen(true); // Show the login modal after logout
     console.log("Logged out and cleared access token.");
   };
 
+  if (loading) {
+    // Show a loading indicator while validating the token or fetching data
+    return (
+      <LoadingIndicator />
+    );
+  }
+
   return (
     <div>
-      {/* Show LoginModal when there is no access token */}
-      {!accessToken && (
-        <LoginModal isOpen={true} onClose={() => setModalOpen(false)} />
-      )}
-  
       {/* Show the main app content when there is an access token */}
-      {accessToken && (
+      {accessToken ? (
         <div>
           <button onClick={logout}>Logout</button>
-          {userData && (
+          {userData ? (
             <div>
               <h2>Welcome, {userData.display_name}</h2>
-              <img src={userData.images[0]?.url} alt="Profile" width={100} />
+              <Image
+                src={userData.images[0]?.url || "/default-profile.png"}
+                alt="Profile"
+                width={100}
+                height={100}
+              />
+                 {/* <SpotifyUserDisplay />
+                <MoodSelector />
+                  <PulsePlaylist /> */}
             </div>
+          ) : (
+            <p>Loading user data...</p>
           )}
         </div>
+      ) : (
+        // Show LoginModal when there is no access token
+        <LoginModal isOpen={true} onClose={() => console.log("Modal closed")} />
       )}
     </div>
   );
