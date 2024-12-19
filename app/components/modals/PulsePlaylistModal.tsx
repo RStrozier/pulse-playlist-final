@@ -6,16 +6,16 @@ import { useState } from "react";
 import FavoritePlaylist from "../playlist/FavoritePlaylist";
 import UserSelection from "../user/UserSelection";
 import FavoriteSong from "../user/FavoriteSong";
-import { PulsePlaylistModalProps, Track } from "@/app/data/interfaces";
+import { PulsePlaylistModalProps } from "@/app/data/interfaces";
 import { PulsePlaylistModalstyle } from "@/app/data/styles";
 import useSpotifyRecommendations from "@/app/hooks/useSpotifyRecommendations";
-interface Props {
-  open: boolean;
-  onClose: () => void;
-  tracks?: Track[]; // Make tracks optional
-  loading: boolean;
-  error: string | null;
-}
+// interface Props {
+//   open: boolean;
+//   onClose: () => void;
+//   tracks?: Track[]; // Make tracks optional
+//   loading: boolean;
+//   error: string | null;
+// }
 
 const PulsePlaylistModal = ({
  open, onClose
@@ -45,7 +45,7 @@ const PulsePlaylistModal = ({
           <div className="flex-1">
             <h3 className="font-semibold text-lg text-gray-900">{track.name}</h3>
             <div className="text-sm text-gray-600">
-              {track.artists.map((artist: { name: any; }) => artist.name).join(", ")}
+              {track.artists.map((artist: { name: string; }) => artist.name).join(", ")}
             </div>
             <div className="text-xs text-gray-500">{track.album.name}</div>
           </div>
@@ -84,7 +84,7 @@ const PulsePlaylistModal = ({
                             <br />
                             <span className="text-gray-500">
                               {track.artists
-                                .map((artist: { name: any; }) => artist.name)
+                                .map((artist: { name: string; }) => artist.name)
                                 .join(", ")}
                             </span>
                           </div>
