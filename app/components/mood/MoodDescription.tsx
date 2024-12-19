@@ -3,7 +3,7 @@
 const MoodDescription = () => {
     return (
       <>
-       <div className="bg-gray-800 mx-auto max-w-md mt-4 text-gray-200 p-3 my-2 
+       <div className="bg-gray-800 mx-auto max-w-md mt-4 mx-2 text-gray-200 p-3 my-2 
        rounded-lg shadow-lg border-2 border-red-500">
           <div className="text-sm leading-relaxed">
           Pulse Playlist helps you connect your emotional state with music. 

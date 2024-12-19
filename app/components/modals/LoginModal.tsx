@@ -69,7 +69,7 @@ export default function LoginModal({
             >
               Login with Spotify
             </button>            
-            <div className="mt-3 mx-4 text-xs text-gray-300">Please Note: This site is currently under 
+            <div className="mt-3 mx-4 text-xs text-gray-300">Note: This site is currently under 
               development. 
               <div className="text-red-400">Only authorized users have access at this time.</div> 
             </div>

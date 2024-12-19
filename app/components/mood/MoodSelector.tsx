@@ -80,23 +80,24 @@ const MoodSelector = () => {
                             </Tooltip>
                         ))}
                     </div>
+                    <div className="mini-spacer"></div>
                     <Button
-  variant="contained"
-  sx={{
-    p: 2,
-    mx: 2,
-    backgroundColor: '#EF4444', 
-    color: 'white', 
-    '&:hover': {
-      backgroundColor: 'darkred', 
-    },
-    fontWeight: 'semibold', 
-    borderRadius: 2, 
-  }}
-  onClick={() => toggleExpand()}
->
-  Confirm Mood
-</Button>
+                        variant="contained"
+                        sx={{
+                            p: 2,
+                            mx: 2,
+                            backgroundColor: '#EF4444',
+                            color: 'white',
+                            '&:hover': {
+                                backgroundColor: 'darkred',
+                            },
+                            fontWeight: 'semibold',
+                            borderRadius: 2,
+                        }}
+                        onClick={() => toggleExpand()}
+                    >
+                        Confirm Mood
+                    </Button>
                 </div>
             )}
 

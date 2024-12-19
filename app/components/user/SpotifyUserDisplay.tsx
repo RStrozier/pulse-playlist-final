@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useUserData } from "@/app/context/UserDataContext"; 
+
 const SpotifyUserData = () => {
   const { userData, logout } = useUserData(); 
 

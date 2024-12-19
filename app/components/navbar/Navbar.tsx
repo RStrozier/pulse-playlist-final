@@ -37,6 +37,16 @@ const Navbar = () => {
     >
       <List>
         <ListItem>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Link href="/home" passHref>
+                <span className="header-roboto navbar-logo-text">
+                  <span className="text-red-600">Pulse </span> 
+                  <span className="text-white">Playlist</span>
+                </span>
+              </Link>
+            </Typography>
+        </ListItem>
+        <ListItem>
           <Link href="/about" passHref>
             <ListItemText primary="About Pulse" className="drawerItem" />
           </Link>
