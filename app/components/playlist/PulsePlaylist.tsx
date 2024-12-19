@@ -28,7 +28,7 @@ const PulsePlaylist = () => {
 
                 {/* Show the playlist modal button if tracks are available */}
                 {!loading && tracks.length > 0 && (
-                    <PulsePlaylistModal open={modalOpen} onClose={handleCloseModal} />
+                    <PulsePlaylistModal open={modalOpen} onClose={handleCloseModal}  />
                 )}
             </div>
         </>
