@@ -59,7 +59,7 @@ export default function LoginModal({
             <Image
               src={logo}
               alt="Pulse Playlist Logo"
-              className="mb-4"
+              className="mb-4 rounded-lg"
               width={300}
               height={100}
             />
@@ -70,7 +70,8 @@ export default function LoginModal({
               Login with Spotify
             </button>            
             <div className="mt-3 mx-4 text-xs text-gray-300">Please Note: This site is currently under 
-              development. Only authorized users have access at this time.
+              development. 
+              <div className="text-red-400">Only authorized users have access at this time.</div> 
             </div>
           </Box>
         </Fade>
