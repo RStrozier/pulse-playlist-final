@@ -40,7 +40,8 @@ export default function LoginModal({
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)", // Keeps the modal centered
-              width: 400,
+              width: "90%", // Use a percentage width for mobile responsiveness
+              maxWidth: "400px",
               bgcolor: "rgba(26, 26, 26, 0.85)",
               boxShadow: 24,
               p: 4,
